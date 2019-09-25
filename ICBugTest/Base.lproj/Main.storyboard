@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fLP-iP-GBi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Light Content Navigation Controller-->
+        <scene sceneID="Esi-Qp-qk4">
+            <objects>
+                <navigationController id="fLP-iP-GBi" customClass="LightContentNavigationController" customModule="ICBugTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JO7-Z5-Qjr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.19607843137254902" green="0.29411764705882354" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wDI-A6-LFl" kind="relationship" relationship="rootViewController" id="YB9-Bc-Cce"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imf-EI-miI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="203"/>
+        </scene>
+        <!--Main Screen-->
+        <scene sceneID="lSy-2Y-nVL">
+            <objects>
+                <viewController id="wDI-A6-LFl" customClass="ViewController" customModule="ICBugTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lTc-BK-B1g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intercom Bug Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3l-hv-iqI">
+                                <rect key="frame" x="137.5" y="393.5" width="139.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-c3-TSz">
+                                <rect key="frame" x="126" y="453" width="162" height="30"/>
+                                <state key="normal" title="Toggle Status Bar Color"/>
+                                <connections>
+                                    <action selector="didTapChangeStatusBarColorButton" destination="wDI-A6-LFl" eventType="touchUpInside" id="whg-hv-1Ib"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="z3l-hv-iqI" firstAttribute="centerX" secondItem="lTc-BK-B1g" secondAttribute="centerX" id="Cap-tW-6FK"/>
+                            <constraint firstItem="IVa-c3-TSz" firstAttribute="top" secondItem="z3l-hv-iqI" secondAttribute="bottom" constant="38.5" id="K1E-lh-ZM2"/>
+                            <constraint firstItem="z3l-hv-iqI" firstAttribute="centerY" secondItem="lTc-BK-B1g" secondAttribute="centerY" id="dkL-X6-f1t"/>
+                            <constraint firstItem="IVa-c3-TSz" firstAttribute="centerX" secondItem="lTc-BK-B1g" secondAttribute="centerX" id="wJs-LY-xDX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Is0-HX-CfQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Screen" id="Xgu-mP-F0m"/>
+                    <connections>
+                        <outlet property="button" destination="IVa-c3-TSz" id="Wrd-GU-Lz2"/>
+                        <outlet property="label" destination="z3l-hv-iqI" id="qwf-GC-Ygv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OrB-dT-GgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="203"/>
+        </scene>
+    </scenes>
+</document>
